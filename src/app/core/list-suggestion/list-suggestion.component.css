@@ -1,0 +1,23 @@
+.suggestion-card {
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  background-color: #f5f5f5;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+}
+
+.status-acceptee {
+  color: green;
+  font-weight: bold;
+}
+
+.status-refusee {
+  color: red;
+  font-weight: bold;
+}
+
+.status-en-attente {
+  color: orange;
+  font-weight: bold;
+}
