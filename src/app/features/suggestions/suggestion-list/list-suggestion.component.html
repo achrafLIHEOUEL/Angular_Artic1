@@ -37,6 +37,7 @@
   <div *ngIf="suggestion.status !== 'refusee'">
     <button (click)="likeSuggestion(suggestion)">Like</button>
     <button (click)="addToFavorites(suggestion)">Ajouter aux favoris</button>
+    <button [routerLink]="[suggestion.id]"> Details</button>
   </div>
 
 </div>
