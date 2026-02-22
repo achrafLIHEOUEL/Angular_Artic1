@@ -1,38 +1,30 @@
-<div class="details-container">
-  <div class="header">
-   
-  </div>
-
-  <div class="suggestion-details" *ngIf="suggestion">
-    <div class="details-header">
-      <h1>{{ suggestion.title }}</h1>
-      <span class="status-badge" [ngClass]="suggestion.status">
-        {{ suggestion.status }}
-      </span>
-    </div>
-
-    <div class="meta-info">
-      <div class="info-item">
-        <strong>ID:</strong> {{ suggestion.id }}
-      </div>
-      <div class="info-item">
-        <strong>Catégorie:</strong> {{ suggestion.category }}
-      </div>
-      <div class="info-item">
-        <strong>Date:</strong> {{ suggestion.date | date:'dd/MM/yyyy' }}
-      </div>
-      <div class="info-item">
-        <strong>Likes:</strong> 👍 {{ suggestion.nbLikes }}
-      </div>
-    </div>
-
-    <div class="description-section">
-      <h3>Description</h3>
-      <p>{{ suggestion.description }}</p>
-    </div>
-
+<div class="details-container" *ngIf="suggestion">
   
+  
+  <button [routerLink]="['/suggestions/listsuggestion']">← Back to list</button>
+
+  <div class="details-header">
+    <h1>{{ suggestion.title }}</h1>
+    <span class="status-badge" [ngClass]="suggestion.status">
+      {{ suggestion.status }}
+    </span>
   </div>
 
- 
+  <div class="meta-info">
+    <p><strong>ID:</strong> {{ suggestion.id }}</p>
+    <p><strong>Catégorie:</strong> {{ suggestion.category }}</p>
+    <p><strong>Date:</strong> {{ suggestion.date | date:'dd/MM/yyyy' }}</p>
+    <p><strong>Likes:</strong> 👍 {{ suggestion.nbLikes }}</p>
+  </div>
+
+  <div class="description-section">
+    <h3>Description</h3>
+    <p>{{ suggestion.description }}</p>
+  </div>
+
+</div>
+
+<div *ngIf="!suggestion">
+  <p>Suggestion introuvable.</p>
+  <button [routerLink]="['/suggestions/listsuggestion']">← Back to list</button>
 </div>

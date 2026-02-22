@@ -7,4 +7,5 @@ category!: string;
 date!: Date;
 status!: string;
 nbLikes!: number;
+
 }

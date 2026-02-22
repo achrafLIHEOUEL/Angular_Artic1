@@ -4,8 +4,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './core/header/header.component';
 import { FooterComponent } from './core/footer/footer.component';
-import { FormsModule } from '@angular/forms';
 import { NotfoundComponent } from './core/notfound/notfound.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'; 
 
 
 @NgModule({
@@ -13,12 +13,15 @@ import { NotfoundComponent } from './core/notfound/notfound.component';
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    NotfoundComponent
+    NotfoundComponent,
+    
+     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-     FormsModule
+     FormsModule,
+     ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
